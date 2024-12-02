@@ -1,0 +1,340 @@
+/* General Body Styling */
+body {
+  background-color: #f4f4f4; /* Light background for the body */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header container styling */
+.header-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 40px;
+  background-color: #313131;
+  color: white;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  left: 0;
+  right: 0;
+}
+
+/* Logo Styling */
+.logo img {
+  width: 120px;
+  height: auto;
+}
+
+/* Container for navigation, search, and login */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Navigation Styling */
+.navigation ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.navigation ul li {
+  margin-right: 20px;
+}
+
+.navigation ul li:last-child {
+  margin-right: 0;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+  color: #ddd;
+}
+
+/* Search Bar Styling */
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+#search-bar {
+  padding: 8px;
+  width: 200px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  background-color: lightblue;
+  color: white;
+}
+
+#search-bar:focus {
+  outline: none;
+  border-color: black;
+}
+
+/* Login Link Styling */
+.login a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: darkgray;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.login a:hover {
+  background-color: black;
+}
+
+/* Social Media Icons Styling */
+.social-icons a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  margin-left: 10px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ddd;
+}
+
+/* Content Styling */
+.content img{
+  width: 100px;
+  height: 570px;
+}
+.content {
+  background-image: url("healthcare-medical-science-healthcare-icon-digital-technology-world-concept-modern-business-innovation-treatment-medicine-abstract-about-hi-tech-future-blue-background-and-medical-research-vector.jpg");
+  margin-top: 100px; /* To ensure content is below the fixed header */
+  padding: 20px;    
+  height: 860px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 800px;
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  margin-top: 150px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Gallery Styling */
+.gallery {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 0 20px;
+}
+
+.gallery-item {
+  border-style: solid;
+  border-color: white;
+  border-radius: 5px;
+  background-color: darkgray;
+  flex: 1;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+}
+/* YouTube Video Section */
+.youtube-video {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.youtube-video iframe {
+  width: 100%;
+  max-width: 800px;
+  height: 450px;
+  border: none;
+}
+
+/* Google Map Section */
+.google-map {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.google-map iframe {
+  width: 100%;
+  max-width: 800px;
+  height: 450px;
+  border: none;
+}
+/* Add background image to the container holding gallery, youtube, and map sections */
+.content {
+  background-image: url("healthcare-medical-science-healthcare-icon-digital-technology-world-concept-modern-business-innovation-treatment-medicine-abstract-about-hi-tech-future-blue-background-and-medical-research-vector.jpg"); /* Change this URL to your desired background image */
+  background-size: cover; /* Make sure the image covers the entire container */
+  background-position: center; /* Position the background in the center */
+  background-repeat: no-repeat; /* Ensure the background image doesn't repeat */
+  margin-top: 100px; /* To ensure content is below the fixed header */
+  padding: 20px;
+  height: auto; /* Allow the height to expand based on content */
+  padding-bottom: 40px; /* Some space at the bottom */
+}
+
+/* Styling for Image Gallery Section */
+.gallery {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 0 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Optional: Background color with some transparency to make it stand out */
+  border-radius: 10px;
+}
+
+/* Styling for YouTube Video Section */
+.youtube-video {
+  text-align: center;
+  margin-top: 30px;
+  background-color: rgba(255, 255, 255, 0.8); /* Optional: Background color with transparency */
+  border-radius: 10px;
+  padding: 20px;
+  background-color: gray;
+}
+
+/* Styling for Google Map Section */
+.google-map {
+  text-align: center;
+  margin-top: 30px;
+  background-color: rgba(255, 255, 255, 0.8); /* Optional: Background color with transparency */
+  border-radius: 10px;
+  padding: 20px;
+  background-color: gray;
+}
+/* Footer Styling */
+.footer-container {
+  background-color: #313131;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ddd;
+}
+
+.footer-social {
+  margin-top: 15px;
+}
+
+.footer-social a {
+  color: white;
+  font-size: 1.5rem;
+  margin: 0 15px;
+  transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #ddd;
+}
+

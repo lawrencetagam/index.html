@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+  <!-- Link to Font Awesome CDN for Social Media Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header-container">
+    <div class="logo">
+      <img src="MediTrack__1_-removebg-preview.png" alt="Logo">
+    </div>
+
+    <!-- Navigation, Search, Login, and Social Media Icons -->
+    <div class="header-right">
+      <nav class="navigation">
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Search Bar -->
+      <div class="search-container">
+        <input type="text" placeholder="Search..." id="search-bar">
+      </div>
+
+      <!-- Login Link -->
+      <div class="login">
+        <a href="login.html">Login</a>
+      </div>
+  </header>
+
+  <!-- Content (Slideshow) Section -->
+  <div class="content">
+    <div class="slideshow-container">
+      <!-- Slideshow Images -->
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="top-technology-trends-driving-growth-and-innovation-in-the-healthcare-sector.jpg" style="width:100%">
+        <div class="text"></div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="Medical-Technology-Blog-768x512.jpg" style="width:100%">
+        <div class="text"></div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="Nov_4_iStock-1127069581-scaled.jpeg" style="width:100%">
+        <div class="text"></div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+    </div>
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+  </div>
+
+  <!-- Image Gallery Section -->
+  <div class="gallery">
+    <div class="gallery-item">
+      <img src="galleryfirst.jpg" alt="Gallery Image 1">
+      <p>Scheduled take of Medicines</p> 
+    </div>
+    <div class="gallery-item">
+      <img src="gallery2.jpg" alt="Gallery Image 2">
+      <p>Real-time tracker of Prescriptions</p>
+    </div>
+    <div class="gallery-item">
+      <img src="gallery3.jpg" alt="Gallery Image 3">
+      <p>Easy and User-Friendly</p>
+    </div>
+  </div>
+
+  <!-- YouTube Video Embed Section -->
+  <div class="youtube-video">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/HeTY0J2R7xg?feature=shared" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+
+  <!-- Google Maps Embed Section -->
+  <div class="google-map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15777.721030921666!2d124.7372701987962!3d8.650564812341642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32ffe44be147a51b%3A0x8fcbb36217d1d262!2sLower%20Jasaan%20(Pob.)%2C%20Jasaan%2C%20Misamis%20Oriental!5e0!3m2!1sen!2sph!4v1732782557141!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+  <footer class="footer-container">
+  <div class="footer-content">
+    <p>&copy; 2024 MediTrack. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms of Service</a>
+    </div>
+    <div class="footer-social">
+      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+  </div>
+</footer>
+
+  <script type="text/javascript">
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+  </script>
+</body>
+</html>

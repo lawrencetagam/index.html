@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styledashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js -->
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <div class="logo-container">
+                <!-- Logo Image -->
+                <img src="MediTrack__1_-removebg-preview.png" alt="Logo" class="logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#home"><img src="home-svgrepo-com.png" alt="Home Image" class="nav-image"> Home</a></li>
+                <li><a href="#"><img src="dashboard-svgrepo-com.png" alt="Dashboard Image" class="nav-image"> Dashboard</a></li>
+                <li><a href="#"><img src="medicines-svgrepo-com.png" alt="Prescriptions Image" class="nav-image"> Prescriptions</a></li>
+                <li><a href="#"><img src="appointment.png" alt="Appointments Image" class="nav-image"> Appointments</a></li>
+                <li><a href="#"><img src="costumer-service-customer-helpdesk-svgrepo-com.png" alt="Help Desk Image" class="nav-image"> Help Desk</a></li>
+                <li><a href="#"><img src="settings-minimalistic-svgrepo-com.png" alt="Settings Image" class="nav-image"> Settings</a></li>
+            </ul>
+
+            <!-- Footer section inside sidebar -->
+            <div class="sidebar-footer">
+                <p>&copy; 2024 MediTrack. All rights reserved.</p>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="header">
+                <h1>Welcome Back, Lawrence!</h1>
+                <div class="search-container">
+                    <input type="text" placeholder="Search..." class="search-bar">
+                    <img src="notification.png" alt="Notification Bell" class="bell-icon">
+                </div>
+            </div>
+
+            <div class="stats-container">
+                <div class="stats-card">
+                    <h2>Total Patients</h2>
+                    <p class="number">1,234</p>
+                </div>
+                <div class="stats-card">
+                    <h2>Medicines</h2>
+                    <p class="number">250</p>
+                </div>
+            </div>
+
+            <!-- Chart Container -->
+            <div class="chart-container">
+                <canvas id="myChart" width="1000" height="500"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'line', // Type of chart
+            data: {
+                labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'], // Days of the week
+                datasets: [{
+                    label: 'Dosage Intake',
+                    data: [0, 5, 6, 7, 10, 8, 5], // Example Dosage Intake data
+                    borderColor: 'yellow', // Line color for Dosage Intake
+                    backgroundColor: 'rgba(255, 255, 0, 0.2)', // Fill color for Dosage Intake
+                    fill: true, // Fill under the line
+                    tension: 0.4, // Line smoothness
+                    borderWidth: 2
+                }, {
+                    label: 'General Health',
+                    data: [3, 10, 6, 8, 2, 8, 5], // Example General Health data
+                    borderColor: 'blue', // Line color for General Health
+                    backgroundColor: 'rgba(0, 0, 255, 0.2)', // Fill color for General Health
+                    fill: true, // Fill under the line
+                    tension: 0.4, // Line smoothness
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: false, // Disable responsiveness
+                scales: {
+                    y: {
+                        beginAtZero: true, // Start the Y-axis at 0
+                        ticks: {
+                            max: 10, // Maximum Y value
+                            stepSize: 2, // Y-axis step size
+                            min: 0, // Minimum Y value
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        position: 'top', // Position the legend at the top
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
